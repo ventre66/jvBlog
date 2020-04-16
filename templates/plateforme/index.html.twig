@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}JvBlog{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for plateforme in plateformes %}
+            <li><a href="{{ path('plateforme_editer', {slug: plateforme.slug}) }}">{{ plateforme.name}}</a></li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
